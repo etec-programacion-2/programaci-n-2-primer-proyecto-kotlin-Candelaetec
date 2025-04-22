@@ -10,4 +10,14 @@ class App {
 fun main() {
     println("Candela de la Cruz")
     println("22 de abril de 2025")
+    rectangulo()
+
+}
+
+fun rectangulo() {
+    val height: Int = 35
+    val width: Int = 3
+    val area = height * width
+
+    println("La altura del rectángulo es: $height y el ancho es: $width. por lo tanto su área es de: $area" )
 }
