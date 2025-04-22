@@ -10,8 +10,23 @@ class App {
 fun main() {
     println("Candela de la Cruz")
     println("22 de abril de 2025")
+    mostrarTiposDeDatos()
     rectangulo()
+    println(NegPos0(5))
+    println(esParOImpar(5))
 
+}
+
+fun mostrarTiposDeDatos() {
+    val nombre: String = "Candela"
+    val edad: Int = 16
+    val altura: Double = 1.63
+    val esEstudiante: Boolean = true
+    
+    println("Nombre: $nombre")
+    println("Edad: $edad")
+    println("Altura: $altura")
+    println("Es estudiante: $esEstudiante")
 }
 
 fun rectangulo() {
@@ -21,3 +36,20 @@ fun rectangulo() {
 
     println("La altura del rectángulo es: $height y el ancho es: $width. por lo tanto su área es de: $area" )
 }
+fun esParOImpar(numero: Int): String {
+    return when {
+        numero % 2 == 0 -> "Par"
+        else -> "Impar"
+    }
+}
+
+fun NegPos0(numero:Int): String {
+    return when {
+        numero > 0 -> "El número es positivo"
+        numero < 0 -> "El número es negativo"
+        else -> "El número es cero"
+    }
+}
+    
+
+
