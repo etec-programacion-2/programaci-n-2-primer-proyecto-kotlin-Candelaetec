@@ -19,6 +19,8 @@ fun main() {
     factorial()
     saludar()
     baseExponente()
+    demostrarAlcanceVariables()
+    calcularPromedio()
 
 }
 
@@ -117,6 +119,37 @@ fun baseExponente() {
     val resultado = Math.pow(base, exponente)
     println("$base elevado a $exponente es: $resultado")
 }
-  
 
+fun demostrarAlcanceVariables() {
 
+    val varGlobal = "Soy global acá"
+    
+    if (true) {
+        val variableIf = "local del if"
+        println("if: $variableIf")
+        println("acceder a: $varGlobal")
+    }
+    
+    // Bloque for con su propio ámbito
+    for (i in 1..3) {
+        val variableFor = "local del for - iteración $i"
+        println("Dentro del for: $variableFor")
+        println("Puedo acceder a: $varGlobal")
+    }
+    
+    println("Desde fuera del if y for, solo puedo acceder a: $varGlobal")
+}
+
+fun calcularPromedio() {
+    val numeros = listOf(10, 20, 30, 40, 50) // Lista local
+    var suma = 0  // Variable local mutable
+    var contador = 0  // Variable local mutable
+    
+    for (numero in numeros) {
+        suma += numero
+        contador++
+    }
+    
+    val promedio = if (contador > 0) suma.toDouble() / contador else 0.0
+    println("El promedio de $numeros es: $promedio")
+}
