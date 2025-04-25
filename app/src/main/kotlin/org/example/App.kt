@@ -21,6 +21,10 @@ fun main() {
     baseExponente()
     demostrarAlcanceVariables()
     calcularPromedio()
+    val lista = listOf(5, 2, 9, 1, 5, 6)
+    val (maximo, minimo) = encontrarMaxMin(lista)
+    println("El número más grande es: $maximo")
+    println("El número más pequeño es: $minimo")
 
 }
 
@@ -152,4 +156,24 @@ fun calcularPromedio() {
     
     val promedio = if (contador > 0) suma.toDouble() / contador else 0.0
     println("El promedio de $numeros es: $promedio")
+}
+
+fun encontrarMaxMin(numeros: List<Int>): Pair<Int, Int> {
+    if (numeros.isEmpty()) {
+        return Pair(Int.MIN_VALUE, Int.MAX_VALUE) // O una excepción
+    }
+
+    var maximo = numeros[0]
+    var minimo = numeros[0]
+
+    for (numero in numeros) {
+        if (numero > maximo) {
+            maximo = numero
+        }
+        if (numero < minimo) {
+            minimo = numero
+        }
+    }
+
+    return Pair(maximo, minimo)
 }
