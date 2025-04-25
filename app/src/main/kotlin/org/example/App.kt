@@ -14,6 +14,8 @@ fun main() {
     rectangulo()
     println(NegPos0(5))
     println(esParOImpar(5))
+    mostrarNumerosConLoops()
+    LoopPares()
 
 }
 
@@ -50,6 +52,53 @@ fun NegPos0(numero:Int): String {
         else -> "El número es cero"
     }
 }
+
+fun mostrarNumerosConLoops() {
+
+    println("Usando for:")
+    for (i in 1..10) {
+        println(i)
+    }
+
+    println("\nUsando while:")
+    var j = 1
+    while (j <= 10) {
+        println(j)
+        j++
+    }
     
+
+    println("\nUsando do-while:")
+    var k = 0
+    do {
+        println(k)
+        k++
+    } while (k <= 10)
+}
+
+
+fun LoopPares() {
+    println("Usando for:")
+    for (i in 0..20 step 2) {
+        println(i)
+    }
+    
+
+    println("Usando while:")
+    var j = 2
+    while (j <= 20) {
+        println(j)
+        j+=2
+    }
+    
+
+    println("Usando do-while:")
+    var k = 2
+    do {
+        println(k)
+        k+=2
+    } while (k <= 20)
+}
+  
 
 
