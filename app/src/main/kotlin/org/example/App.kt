@@ -16,6 +16,9 @@ fun main() {
     println(esParOImpar(5))
     mostrarNumerosConLoops()
     LoopPares()
+    factorial()
+    saludar()
+    baseExponente()
 
 }
 
@@ -98,6 +101,21 @@ fun LoopPares() {
         println(k)
         k+=2
     } while (k <= 20)
+}
+
+fun factorial(n: Int= 4): Int {
+    return if (n <= 1) 1 else n * factorial(n - 1)
+}
+
+fun saludar(nombre: String ="Candela", edad: Int = 16) {
+    println("Hola $nombre, tienes $edad años")
+}
+
+fun baseExponente() {
+    val base = 2.0
+    val exponente = 3.0
+    val resultado = Math.pow(base, exponente)
+    println("$base elevado a $exponente es: $resultado")
 }
   
 
